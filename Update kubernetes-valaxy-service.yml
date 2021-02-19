@@ -1,0 +1,9 @@
+---
+- name: create service for deployment
+  hosts: k8s-master-01
+  # become: true
+  user: root
+
+  tasks:
+  - name: create a service
+    command: kubectl apply -f sondv-service.yml
