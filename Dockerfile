@@ -2,4 +2,4 @@ FROM httpd:latest
 
 MAINTAINER AR sondv
 
-COPY ./code /var/www/html/
+COPY /home/code/index.html /var/www/html/
