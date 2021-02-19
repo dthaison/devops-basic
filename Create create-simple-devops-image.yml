@@ -1,0 +1,15 @@
+---
+- hosts: ansible
+  become: true
+
+  tasks:
+  - name: create docker image using war file
+    command: docker build -t simple-devops-image:latest .
+    args:
+      chdir: /opt/k8s-lab
+
+  - name: create tag to image
+    command: docker tag simple-devops-image dthaison/simple-devops-image
+
+  - name: push image on to dockerhub
+    command: docker push dthaison/simple-devops-image
