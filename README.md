@@ -1,5 +1,5 @@
 # devops-basic
 learn devops
-lear cicd
+lear cicd_202
 
 learn git
